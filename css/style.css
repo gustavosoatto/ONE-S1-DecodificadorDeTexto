@@ -1,0 +1,147 @@
+/* reset */
+body,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  text-decoration: none;
+  border: none;
+}
+
+/* variable */
+:root {
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #356ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072b61;
+  --dark-blue-500: #052051;
+
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757fb2;
+
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+}
+
+/* main */
+body {
+  background-color: var(--light-blue-100);
+  font: 400 0.75rem/1.5 "Inter", sans-serif;
+}
+
+.conteiner {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+nav {
+  flex: 1;
+}
+
+.insertText {
+  flex: 3;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.insertText div {
+  gap: 24px;
+}
+.insertText div div {
+  display: flex;
+}
+#text {
+  all: unset;
+  font-size: 2rem;
+  line-height: 1.5;
+  height: 100%;
+  margin-bottom: 24px;
+}
+#text::placeholder {
+  color: var(--dark-blue-400);
+}
+.insertText span {
+  display: block;
+  color: var(--gray-400);
+  margin-bottom: 16px;
+  padding-left: 24px;
+  position: relative;
+}
+.insertText span::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url(../assets/icons/exclamation.svg);
+  color: var(--gray-400);
+  position: absolute; /* Etapa 2 */
+  top: 50%;
+  left: 8px;
+  transform: translate(-50%, -50%); /* Etapa 3 */
+}
+.button {
+  padding: 1.5rem;
+  border-radius: 24px;
+  border: 1px solid var(--dark-blue-300);
+  color: var(--dark-blue-300);
+  flex: 1;
+}
+#encode {
+  color: #fff;
+  background-color: var(--dark-blue-300);
+}
+#decode:hover {
+  background-color: #d8dfe8;
+}
+
+.result-conteiner {
+  flex: 2;
+  display: flex;
+  background-color: #fff;
+  border-radius: 32px;
+  height: calc(100vh - 80px);
+  align-items: center;
+  box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.result {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.result img {
+  max-width: 100%;
+  height: auto;
+}
+.result strong {
+  margin-top: 2rem;
+  color: var(--dark-blue-500);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.result p {
+  margin-top: 1rem;
+}

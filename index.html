@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONE S1 Decodificador de Texto</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="conteiner">
+    <nav><a href="./"><img src="./assets/logo.svg" alt="Alura Logo"></a></nav>
+
+    <div class="insertText">
+      <textarea id="text" placeholder="Digite seu texto"></textarea>
+      <div>
+        <span>Não utilize caracteres especiais.</span>
+        <div>
+          <button type="submit" class="button" id="encode">Criptografar</button>
+          <button type="submit" class="button" id="decode">Descriptografar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-conteiner">
+      <div class="result">
+        <img src="./assets/img/not_found.png" alt="">
+        <strong>Nenhuma mensagem encontrada</strong>
+        <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
