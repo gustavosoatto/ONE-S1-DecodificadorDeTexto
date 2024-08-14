@@ -111,6 +111,9 @@ nav {
   color: #fff;
   background-color: var(--dark-blue-300);
 }
+#encode:hover {
+  background-color: var(--dark-blue-400);
+}
 #decode:hover {
   background-color: #d8dfe8;
 }
