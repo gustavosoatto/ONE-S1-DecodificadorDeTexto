@@ -1,3 +1,5 @@
+const result = document.querySelector(".result");
+
 function encode() {
   let encode = document.getElementById("text").value.toLowerCase();
 
@@ -18,7 +20,8 @@ function encode() {
     }
   });
 
-  document.getElementById("text").value = novaStringVogais;
+  result.innerHTML = novaStringVogais;
+  document.getElementById("copy").classList.remove("disabled");
 }
 
 function decode() {
@@ -42,5 +45,10 @@ function decode() {
     }
   });
 
-  document.getElementById("text").value = novaStringVogais;
+  result.innerHTML = novaStringVogais;
+  document.getElementById("copy").classList.remove("disabled");
 }
+
+document.getElementById("copy").addEventListener("click", () => {
+  navigator.clipboard.writeText(result.innerHTML);
+});
